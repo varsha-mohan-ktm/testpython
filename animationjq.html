@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device_width">
+        <title>jquery</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h1>jquery animation</h1>
+        <button>click</button>
+        <!--<button id="start">start</button><button id="stop">stop</button>-->
+        <div style="background-color: chartreuse; width: 100px; height: 100px;"></div>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("div").animate({
+                        left: '250px',
+                        opacity: '0.5',
+                        height: '150px',
+                        width: '150px',
+                    });
+                });
+                /*$("#start").click(function(){
+                    var div = $("div");
+                    div.animate({height: '300px', opacity: '0.4'}, "slow");
+                    div.animate({width: '300px', opacity: '0.8'}, "slow");
+                    div.animate({height: '100px', opacity: '0.4'}, "slow");
+                    div.animate({width: '100px', opacity: '0.8'}, "slow");
+                }); 
+                $("#stop").click(function(){
+                    $("div").stop();
+                });*/
+            });
+        </script>
+    </body>
+</html>
